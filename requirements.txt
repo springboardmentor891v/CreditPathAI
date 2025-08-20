@@ -1,0 +1,34 @@
+# CreditPathAI Requirements
+# Data manipulation and analysis
+pandas>=1.5.0
+numpy>=1.21.0
+
+# Machine Learning
+scikit-learn>=1.1.0
+xgboost>=1.6.0
+lightgbm>=3.3.0
+
+# Data visualization
+matplotlib>=3.5.0
+seaborn>=0.11.0
+plotly>=5.10.0
+
+# Jupyter notebook support
+jupyter>=1.0.0
+ipykernel>=6.15.0
+
+# Statistical analysis
+scipy>=1.9.0
+statsmodels>=0.13.0
+
+# Model interpretation
+shap>=0.41.0
+lime>=0.2.0
+
+# Utilities
+joblib>=1.1.0
+tqdm>=4.64.0
+
+# File handling
+openpyxl>=3.0.0
+xlrd>=2.0.0
