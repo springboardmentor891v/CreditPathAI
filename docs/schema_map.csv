@@ -1,0 +1,19 @@
+Column Name,Data Type,Business Description
+LoanID,object,Unique identifier for each loan
+Age,int64,Age of borrower in years
+Income,int64,Annual income of borrower
+LoanAmount,int64,Total loan amount applied for
+CreditScore,int64,Borrower's credit score
+MonthsEmployed,int64,Number of months the borrower has been employed
+NumCreditLines,int64,Number of active credit lines borrower holds
+InterestRate,float64,Interest rate (%) applied on the loan
+LoanTerm,int64,Loan term in months
+DTIRatio,float64,Debt-to-Income ratio
+Education,object,"Education level (High School, Bachelor's, Master's)"
+EmploymentType,object,"Type of employment (Full-time, Unemployed, etc.)"
+MaritalStatus,object,"Marital status of borrower (Married, Divorced, etc.)"
+HasMortgage,object,Whether borrower has an existing mortgage (Yes/No)
+HasDependents,object,Whether borrower has dependents (Yes/No)
+LoanPurpose,object,"Purpose of loan (Auto, Business, Other, etc.)"
+HasCoSigner,object,Whether loan has a co-signer (Yes/No)
+Default,int64,"Loan default status (1 = Defaulted, 0 = Not Defaulted)"
