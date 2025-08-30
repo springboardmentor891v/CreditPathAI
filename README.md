@@ -1,2 +1,1 @@
-# CreditPathAI
-Springboard Infosys
+# Work by Dhanalakkshmi
