@@ -111,3 +111,65 @@ Linear Regression works well if these assumptions are met:
 - Assumes linear relationship (not suitable for non-linear data).  
 - Sensitive to outliers.  
 - Poor performance if features are highly correlated.  
+
+
+## 1. Need for Train-Test-Split
+- Machine learning models should **generalize** to unseen data, not just memorize training data.  
+- If we train and test on the same dataset, results may look very accurate but will fail on new data (overfitting).  
+- **Train-Test Split** divides data into:
+  - **Training Set** → used to learn patterns.
+  - **Test Set** → used to evaluate on unseen borrowers.  
+
+**Loan Default Example:**  
+- Train set → learn patterns like income, loan amount, credit history affecting default.  
+- Test set → check accuracy on unseen borrowers.  
+
+---
+
+## 2. Understanding StandardScaler in scikit-learn
+- Features often have different ranges (e.g., `Loan_Amount` in thousands vs `Credit_History` as 0/1).  
+- Some algorithms (Logistic Regression, KNN, SVM) are **sensitive to feature scale**.  
+- **StandardScaler** standardizes features:  
+
+\[
+z = \frac{x - \mu}{\sigma}
+\]  
+
+- After scaling: mean = 0, standard deviation = 1.  
+- Ensures all features contribute equally to the model.  
+
+**Loan Default Example:**  
+- Without scaling → loan amount dominates because of large values.  
+- With scaling → income, loan amount, credit history treated fairly.  
+
+---
+
+## 3. Difference between Scaling and Normalization
+- **Scaling (Standardization):**
+  - Transforms data to mean = 0, std = 1.
+  - Good when features have different units.  
+  - Example: `Loan Amount`, `Applicant Income`.  
+
+- **Normalization (Min-Max Scaling):**
+  - Transforms values into range [0, 1].  
+  - Useful for distance-based models (KNN, Neural Networks).  
+  - Example: Loan amount = ₹50,000 → 0.5 (if min=0, max=100,000).  
+
+**When to Use:**  
+- **StandardScaler** → for models like Logistic Regression, SVM.  
+- **Normalization** → for models where relative distances matter, like KNN, Neural Networks.  
+
+---
+
+## 4. Role of `random_state` and `stratify`
+- **random_state:**
+  - Ensures reproducibility.  
+  - Using the same random_state gives the same train/test split every time.  
+
+- **stratify:**
+  - Keeps the **same class distribution** in train and test as in the original dataset.  
+  - Very important in imbalanced datasets like Loan Default (where defaulters are fewer).  
+  - Without stratify → test set may have fewer or no default cases → poor evaluation.  
+  - With stratify → balanced distribution in both sets.  
+
+---
