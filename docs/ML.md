@@ -74,7 +74,7 @@ Where:
 2. **Multiple Linear Regression** – Two or more independent variables predict the dependent variable.  
 
 \[
-y = b_0 + b_1 x_1 + b_2 x_2 + \dots + b_n x_n
+y = b_0 + b_1 x_1 + b_2 x_2 + ......... + b_n x_n
 \]  
 
 ---
@@ -130,10 +130,9 @@ Linear Regression works well if these assumptions are met:
 - Features often have different ranges (e.g., `Loan_Amount` in thousands vs `Credit_History` as 0/1).  
 - Some algorithms (Logistic Regression, KNN, SVM) are **sensitive to feature scale**.  
 - **StandardScaler** standardizes features:  
-
 \[
-z = \frac{x - \mu}{\sigma}
-\]  
+z = (x - μ) / σ
+\]
 
 - After scaling: mean = 0, standard deviation = 1.  
 - Ensures all features contribute equally to the model.  
