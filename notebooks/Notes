@@ -1,0 +1,35 @@
+🔹 Steps Done
+
+Data Preprocessing
+
+Handled missing values
+
+Encoded categorical variables
+
+Scaled numerical features (StandardScaler)
+
+Handling Imbalance
+
+Checked class distribution
+
+Applied SMOTE oversampling to balance dataset
+
+Machine Learning Models
+
+Logistic Regression
+
+Random Forest
+
+Model Evaluation
+
+Compared before vs after SMOTE
+
+Metrics: Accuracy, Precision, Recall, F1-score
+
+🔹 Key Learnings
+
+Balancing the dataset improves Recall and F1-score.
+
+Logistic Regression = faster, interpretable.
+
+Random Forest = better performance, but heavier to run.
