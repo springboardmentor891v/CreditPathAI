@@ -1,19 +1,35 @@
 Column Name,Data Type,Business Description
-LoanID,object,Unique identifier for each loan
-Age,int64,Age of borrower in years
-Income,int64,Annual income of borrower
-LoanAmount,int64,Total loan amount applied for
-CreditScore,int64,Borrower's credit score
-MonthsEmployed,int64,Number of months the borrower has been employed
-NumCreditLines,int64,Number of active credit lines borrower holds
-InterestRate,float64,Interest rate (%) applied on the loan
-LoanTerm,int64,Loan term in months
-DTIRatio,float64,Debt-to-Income ratio
-Education,object,"Education level (High School, Bachelor's, Master's)"
-EmploymentType,object,"Type of employment (Full-time, Unemployed, etc.)"
-MaritalStatus,object,"Marital status of borrower (Married, Divorced, etc.)"
-HasMortgage,object,Whether borrower has an existing mortgage (Yes/No)
-HasDependents,object,Whether borrower has dependents (Yes/No)
-LoanPurpose,object,"Purpose of loan (Auto, Business, Other, etc.)"
-HasCoSigner,object,Whether loan has a co-signer (Yes/No)
-Default,int64,"Loan default status (1 = Defaulted, 0 = Not Defaulted)"
+ID,int64,Unique identifier for each loan
+year,int64,Year of loan application
+loan_limit,object,"Loan limit category (e.g., cf, ncf)"
+Gender,object,Gender of applicant
+approv_in_adv,object,Approval in advance status
+loan_type,object,Type of loan applied
+loan_purpose,object,Purpose of loan
+Credit_Worthiness,object,Credit worthiness of borrower
+open_credit,object,Open credit information
+business_or_commercial,object,Loan for business or commercial purpose
+loan_amount,int64,Total loan amount requested
+rate_of_interest,float64,Rate of interest (%)
+Interest_rate_spread,float64,Interest rate spread
+Upfront_charges,float64,Upfront charges for the loan
+term,float64,Loan term (in months/years)
+Neg_ammortization,object,Negative amortization status
+interest_only,object,Interest only payment option
+lump_sum_payment,object,Lump sum payment option
+property_value,float64,Value of the property
+construction_type,object,Construction type of property
+occupancy_type,object,Occupancy type of property
+Secured_by,object,What the loan is secured by (collateral)
+total_units,object,"Number of total units (e.g., housing units)"
+income,float64,Borrower's income
+credit_type,object,"Credit bureau used (EXP, EQUI, CRIF, etc.)"
+Credit_Score,int64,Borrower's credit score
+co-applicant_credit_type,object,Co-applicant credit type
+age,object,Age group of borrower
+submission_of_application,object,How the application was submitted (online/institution)
+LTV,float64,Loan-to-Value (LTV) ratio
+Region,object,Region of borrower
+Security_Type,object,Security type of loan
+Status,int64,"Loan status (1 = Defaulted, 0 = Not Defaulted)"
+dtir1,float64,Debt-to-Income ratio (DTI)

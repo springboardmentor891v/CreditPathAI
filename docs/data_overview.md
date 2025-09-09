@@ -1,58 +1,76 @@
-#  Loan Default Prediction Dataset Overview
+dataset_overview = """
+# Loan Default Prediction Dataset Overview
 
 ## Source
-The dataset is sourced from Kaggle:  
-[Loan Default Dataset](https://www.kaggle.com/datasets/nikhil1e9/loan-default?resource=download)
+The dataset is sourced from [Loan Default Dataset (Kaggle)](https://www.kaggle.com/datasets/yasserh/loan-default-dataset/data).
 
 ---
 
 ## Dataset Information
-- **Total Rows:** 255,347  
-- **Total Columns:** 18  
-- **File Size (approx):** 35 MB  
-- **Target Variable:** `Default`  
-  - `1` → Loan Defaulted  
-  - `0` → Loan Not Defaulted  
+- **Total Rows:** 148,670
+- **Total Columns:** 34
+- **File Size (approx):** ~45 MB
+- **Target Variable:** `Status`
+  - `1` → Loan Defaulted
+  - `0` → Loan Not Defaulted
 
 ---
 
 ## Dataset Schema
 
-| Column Name      | Data Type | Description |
-|------------------|-----------|-------------|
-| **LoanID**       | object    | Unique identifier for each loan |
-| **Age**          | int64     | Age of borrower (in years) |
-| **Income**       | int64     | Annual income of borrower |
-| **LoanAmount**   | int64     | Total loan amount applied for |
-| **CreditScore**  | int64     | Borrower's credit score |
-| **MonthsEmployed** | int64   | Number of months the borrower has been employed |
-| **NumCreditLines** | int64   | Number of active credit lines borrower holds |
-| **InterestRate** | float64   | Interest rate (%) applied on the loan |
-| **LoanTerm**     | int64     | Duration of loan (in months) |
-| **DTIRatio**     | float64   | Debt-to-Income ratio |
-| **Education**    | object    | Education level (e.g., High School, Bachelor's, Master's) |
-| **EmploymentType** | object  | Type of employment (e.g., Full-time, Unemployed) |
-| **MaritalStatus** | object   | Marital status of borrower (Married, Divorced, etc.) |
-| **HasMortgage**  | object    | Whether borrower has an existing mortgage (Yes/No) |
-| **HasDependents** | object   | Whether borrower has dependents (Yes/No) |
-| **LoanPurpose**  | object    | Purpose of loan (Auto, Business, Other, etc.) |
-| **HasCoSigner**  | object    | Whether loan has a co-signer (Yes/No) |
-| **Default**      | int64     | Loan default status (1 = Defaulted, 0 = Not Defaulted) |
+| Column Name              | Data Type | Description |
+|---------------------------|-----------|-------------|
+| **ID**                   | int64     | Unique identifier for each loan |
+| **year**                 | int64     | Year of loan application |
+| **loan_limit**           | object    | Loan limit category (e.g., cf, ncf) |
+| **Gender**               | object    | Gender of applicant |
+| **approv_in_adv**        | object    | Whether approval was obtained in advance |
+| **loan_type**            | object    | Type of loan applied |
+| **loan_purpose**         | object    | Purpose of the loan |
+| **Credit_Worthiness**    | object    | Creditworthiness rating of the borrower |
+| **open_credit**          | object    | Open credit information |
+| **business_or_commercial** | object  | Whether loan is for business/commercial purpose |
+| **loan_amount**          | int64     | Total loan amount requested |
+| **rate_of_interest**     | float64   | Rate of interest (%) applied |
+| **Interest_rate_spread** | float64   | Spread over base interest rate |
+| **Upfront_charges**      | float64   | Upfront charges for the loan |
+| **term**                 | float64   | Loan term (in months/years) |
+| **Neg_ammortization**    | object    | Negative amortization status |
+| **interest_only**        | object    | Whether interest-only payments allowed |
+| **lump_sum_payment**     | object    | Whether lump sum payment allowed |
+| **property_value**       | float64   | Value of property |
+| **construction_type**    | object    | Type of property construction |
+| **occupancy_type**       | object    | Occupancy type of property |
+| **Secured_by**           | object    | What the loan is secured by (collateral) |
+| **total_units**          | object    | Number of total housing units |
+| **income**               | float64   | Borrower's income |
+| **credit_type**          | object    | Credit bureau type (EXP, EQUI, CRIF, etc.) |
+| **Credit_Score**         | int64     | Borrower's credit score |
+| **co-applicant_credit_type** | object | Co-applicant’s credit type |
+| **age**                  | object    | Age group of borrower (e.g., 25–34, 45–54) |
+| **submission_of_application** | object | How loan application was submitted (to institution/not) |
+| **LTV**                  | float64   | Loan-to-Value ratio |
+| **Region**               | object    | Geographical region of applicant |
+| **Security_Type**        | object    | Type of loan security |
+| **Status**               | int64     | Loan status (1 = Defaulted, 0 = Not Defaulted) |
+| **dtir1**                | float64   | Debt-to-Income ratio |
 
 ---
 
 ## Sample Data
 
-| LoanID     | Age | Income | LoanAmount | CreditScore | MonthsEmployed | NumCreditLines | InterestRate | LoanTerm | DTIRatio | Education   | EmploymentType | MaritalStatus | HasMortgage | HasDependents | LoanPurpose | HasCoSigner | Default |
-|------------|-----|--------|------------|-------------|----------------|----------------|--------------|----------|----------|-------------|----------------|---------------|-------------|---------------|-------------|-------------|---------|
-| I38PQUQS96 | 56  | 85994  | 50587      | 520         | 80             | 4              | 15.23        | 36       | 0.44     | Bachelor's  | Full-time      | Divorced      | Yes         | Yes           | Other       | Yes         | 0       |
-| HPSK72WA7R | 69  | 50432  | 124440     | 458         | 15             | 1              | 4.81         | 60       | 0.68     | Master's    | Full-time      | Married       | No          | No            | Other       | Yes         | 0       |
-| C1OZ6DPJ8Y | 46  | 84208  | 129188     | 451         | 26             | 3              | 21.17        | 24       | 0.31     | Master's    | Unemployed     | Divorced      | Yes         | Yes           | Auto        | No          | 1       |
+| ID    | year | loan_limit | Gender | approv_in_adv | loan_type | loan_purpose | Credit_Worthiness | open_credit | business_or_commercial | credit_type | Credit_Score | co-applicant_credit_type | age   | submission_of_application | LTV      | Region | Security_Type | Status | dtir1 |
+|-------|------|------------|--------|---------------|-----------|--------------|-------------------|-------------|------------------------|-------------|--------------|--------------------------|-------|---------------------------|----------|--------|---------------|--------|-------|
+| 24890 | 2019 | cf         | Sex Not Available | nopre | type1 | p1 | l1 | nopc | nob/c | EXP  | 758 | CIB | 25-34 | to_inst   | 98.72 | south | direct | 1 | 45.0 |
+| 24891 | 2019 | cf         | Male   | nopre         | type2     | p1 | l1 | nopc | b/c   | EQUI | 552 | EXP | 55-64 | to_inst   | NaN   | North | direct | 1 | NaN |
+| 24892 | 2019 | cf         | Male   | pre           | type1     | p1 | l1 | nopc | nob/c | EXP  | 834 | CIB | 35-44 | to_inst   | 80.02 | south | direct | 0 | 46.0 |
+| 24893 | 2019 | cf         | Male   | nopre         | type1     | p4 | l1 | nopc | nob/c | EXP  | 587 | CIB | 45-54 | not_inst  | 69.38 | North | direct | 0 | 42.0 |
+
 
 ---
 
 ## Notes
-- **Target variable:** `Default` is binary (0 = Not Defaulted, 1 = Defaulted).  
-- **Categorical columns:** (`Education`, `EmploymentType`, `MaritalStatus`, etc.) → Require encoding before modeling.  
-- **Numerical columns:** (`Income`, `LoanAmount`, `CreditScore`, `InterestRate`, `DTIRatio`) → May need scaling/normalization depending on the ML algorithm.  
----
+- **Target variable:** `Status` is binary (0 = Not Defaulted, 1 = Defaulted).  
+- **Categorical columns:** (`loan_limit`, `Gender`, `loan_type`, `loan_purpose`, `Credit_Worthiness`, `Region`, etc.) → Require encoding before modeling.  
+- **Numerical columns:** (`Credit_Score`, `LTV`, `dtir1`) → May need scaling/normalization depending on ML algorithms.  
+- **Missing values:** Some columns (e.g., `LTV`, `dtir1`) contain `NaN` values that require handling.
