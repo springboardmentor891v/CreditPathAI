@@ -1,0 +1,19 @@
+Column Name,Data Type,Business Description
+LoanID,object,Unique identifier for each loan
+Age,int64,Year of loan application
+Income,int64,"Loan limit category (e.g., cf, ncf)"
+LoanAmount,int64,Gender of applicant
+CreditScore,int64,Approval in advance status
+MonthsEmployed,int64,Type of loan applied
+NumCreditLines,int64,Purpose of loan
+InterestRate,float64,Credit worthiness of borrower
+LoanTerm,int64,Open credit information
+DTIRatio,float64,Loan for business or commercial purpose
+Education,object,Total loan amount requested
+EmploymentType,object,Rate of interest (%)
+MaritalStatus,object,Interest rate spread
+HasMortgage,object,Upfront charges for the loan
+HasDependents,object,Loan term (in months/years)
+LoanPurpose,object,Negative amortization status
+HasCoSigner,object,Interest only payment option
+Default,int64,Lump sum payment option
