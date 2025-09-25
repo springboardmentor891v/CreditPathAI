@@ -57,17 +57,6 @@ REST API using Flask/Django.
 
 Dashboard for loan officers.
 
-Results
-Model	Accuracy
-Logistic Regression	86.1%
-Random Forest	85.3%
-SVM	85.3%
-XGBoost	82.1%
-Decision Tree	78.0%
-
-Best Model: Logistic Regression with 86.1% accuracy.
-This enables early identification of default risks, supporting targeted recovery strategies.
-
 Tech Stack
 
 Programming Language: Python
