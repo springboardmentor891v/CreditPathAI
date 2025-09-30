@@ -1,0 +1,8 @@
+# streamlit_app/requirements.txt
+
+streamlit
+pandas
+numpy
+scikit-learn==1.2.2  # Good practice to pin versions for consistency
+xgboost==1.7.5      # Pinning the XGBoost version is also important
+joblib
