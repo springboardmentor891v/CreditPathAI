@@ -49,5 +49,10 @@
 
 ---
 
+## Output
 
+<img width="1920" height="1080" alt="Screenshot (153)" src="https://github.com/user-attachments/assets/b839d6a5-c6be-497b-adc2-d44f3c896d75" />
 
+<img width="1920" height="1080" alt="Screenshot (155)" src="https://github.com/user-attachments/assets/a0d165d2-cef1-4323-a32d-75811e769cc5" />
+<img width="1920" height="1080" alt="Screenshot (152)" src="https://github.com/user-attachments/assets/91ebdc3e-fcd8-4e0e-ae92-f3939cd2b2da" />
+<img width="1920" height="1080" alt="Screenshot (151)" src="https://github.com/user-attachments/assets/ba02f4ec-1b1b-4f65-a9bb-8257dcd4de88" />
