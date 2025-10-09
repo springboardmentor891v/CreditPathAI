@@ -79,13 +79,15 @@ The method includes:
 
 Histograms show loan amount is right-skewed (<$500K), Credit Score is normal (700-750), and Status is imbalanced. Correlations include loan_amount-property_value (0.73).
 
-![Feature Distributions](images/feature_distributions.png)
+![Feature Distributions](<img width="1632" height="1221" alt="image" src="https://github.com/user-attachments/assets/6b1ded00-5b44-4db6-8c0b-bdd0f43f9219" />
+)
 
 ### Visualizations
 
 Key visualizations include feature distribution histograms, a correlation heatmap, and a box plot of interest rate vs. loan status.
 
-![Correlation Matrix](images/correlation_matrix.png)
+![Correlation Matrix](<img width="1045" height="965" alt="image" src="https://github.com/user-attachments/assets/bf824040-bedc-4cef-ab63-594efb56621c" />
+)
 
 ![Rate of Interest vs Loan Status](images/interest_rate_boxplot.png)
 
@@ -113,7 +115,8 @@ Models were compared, with XGBoost offering the best recall and Random Forest th
 
 ROC curves show Random Forest (AUC ≈ 0.98) and XGBoost (AUC ≈ 0.99) outperforming others, with all models exceeding random guessing.
 
-![ROC-AUC Curves](images/roc_curves.png)
+![ROC-AUC Curves](<img width="846" height="701" alt="image" src="https://github.com/user-attachments/assets/aed0f0c6-937d-48ec-9eb5-048c9353936b" />
+)
 
 ---
 
