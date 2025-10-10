@@ -110,47 +110,38 @@ def main():
         input_data = show_input_form()
 
     # --- Main Content Area ---
-    col1, col2 = st.columns([1.5, 1]) # Create two columns, one larger than the other
-
-    with col1:
-        st.header("🔮 Prediction Results")
-        
-        # Add a prediction button
-        if st.button("🎯 Predict Default Risk", type="primary"):
-            try:
-                model = load_model(selected_model)
-                result = predict_loan_default(model, input_data)
-                
-                st.write("---")
-                pred_col1, pred_col2 = st.columns(2)
-                with pred_col1:
-                    if result['prediction_label'] == 'Default':
-                        st.error(f"## Prediction: {result['prediction_label']}")
-                    else:
-                        st.success(f"## Prediction: {result['prediction_label']}")
-                
-                with pred_col2:
-                    st.metric("Default Probability", f"{result['probability_default']:.2%}")
-
-                # Risk assessment
-                if result['probability_default'] > 0.7:
-                    st.error("**Risk Assessment: 🔴 High Risk**")
-                elif result['probability_default'] > 0.3:
-                    st.warning("**Risk Assessment: 🟡 Medium Risk**")
+    st.header("🔮 Prediction Results")
+    
+    # Add a prediction button
+    if st.button("🎯 Predict Default Risk", type="primary"):
+        try:
+            model = load_model(selected_model)
+            result = predict_loan_default(model, input_data)
+            
+            st.write("---")
+            pred_col1, pred_col2 = st.columns(2)
+            with pred_col1:
+                if result['prediction_label'] == 'Default':
+                    st.error(f"## Prediction: {result['prediction_label']}")
                 else:
-                    st.success("**Risk Assessment: 🟢 Low Risk**")
+                    st.success(f"## Prediction: {result['prediction_label']}")
+            
+            with pred_col2:
+                st.metric("Default Probability", f"{result['probability_default']:.2%}")
+                st.metric("No Default Probability", f"{result['probability_no_default']:.2%}")
 
-            except Exception as e:
-                st.error(f"An error occurred during prediction: {str(e)}")
-        else:
-            st.info("Adjust the parameters in the sidebar and click 'Predict Default Risk'.")
+            # Risk assessment
+            if result['probability_default'] > 0.7:
+                st.error("**Risk Assessment: 🔴 High Risk**")
+            elif result['probability_default'] > 0.3:
+                st.warning("**Risk Assessment: 🟡 Medium Risk**")
+            else:
+                st.success("**Risk Assessment: 🟢 Low Risk**")
 
-    with col2:
-        st.header("📊 Model Performance Overview")
-        if performance_df is not None:
-            st.dataframe(performance_df.sort_values('F1-score', ascending=False).set_index('Model'))
-        else:
-            st.warning("Performance summary not found.")
+        except Exception as e:
+            st.error(f"An error occurred during prediction: {str(e)}")
+    else:
+        st.info("Adjust the parameters in the sidebar and click 'Predict Default Risk'.")
             
     st.markdown("---")
     st.markdown("*CreditPathAI - Powered by Machine Learning*")
