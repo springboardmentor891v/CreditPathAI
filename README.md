@@ -1,6 +1,6 @@
-# 🚀 CreditPath AI – Predictive Modeling for Loan Default Risk & Personalized Recovery Strategy
+# CreditPath AI – Predictive Modeling for Loan Default Risk & Personalized Recovery Strategy
 
-## 💜 Project Overview
+## Project Overview
 
 **CreditPath AI** is a **machine learning-based credit risk management system** developed under the Infosys Springboard Internship 6.0 (AI Batch 1).  
 It focuses on predicting loan default risks and offering personalized recovery strategies to help financial institutions make smarter, data-driven lending decisions.
@@ -12,7 +12,7 @@ The system supports **targeted recovery strategies**, **optimized risk managemen
 
 ---
 
-## ⚙️ Methodology
+## Methodology
 
 1. **Data Collection**  
    Loan application records, repayment histories, demographic data, and behavioral variables were gathered from financial institution databases and publicly available datasets.
@@ -31,7 +31,7 @@ The system supports **targeted recovery strategies**, **optimized risk managemen
 
 ---
 
-## 🚀 Key Highlights
+##  Key Highlights
 
 - 💡 Combines **loan default prediction** with **personalized recovery strategy**.  
 - 📊 Integrates **behavioral and demographic profiling** for better segmentation.  
@@ -40,13 +40,13 @@ The system supports **targeted recovery strategies**, **optimized risk managemen
 
 ---
 
-## 🎯 Goal
+## Goal
 
 Empower financial institutions with an **AI-powered, data-driven solution** that enhances credit risk assessment, minimizes losses, and streamlines recovery strategies.
 
 ---
 
-## 👨‍🏫 Project Details
+## Project Details
 
 - **Project Title:** CreditPath AI – Predictive Modeling for Loan Default Risk & Personalized Recovery Strategy  
 - **Mentor:** Dr. N. Jagan Mohan  
