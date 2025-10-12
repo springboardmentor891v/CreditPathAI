@@ -1,4 +1,4 @@
-# CreditPath AI – Predictive Modeling for Loan Default Risk & Personalized Recovery Strategy
+# CreditPath AI – Predictive Modeling for Loan Default Risk
 
 ## Project Overview
 
@@ -53,7 +53,7 @@ Empower financial institutions with an **AI-powered, data-driven solution** that
 - **Internship:** Infosys Springboard Internship 6.0 (AI Batch 1)  
 - **Developed By:** Interns of AI Batch 1  
 
-### 🔗 Links
+### Links
 
 - [GitHub Repository](https://github.com/springboardmentor891v/CreditPathAI)  
 - [Project PPT](https://docs.google.com/presentation/d/1743-zttuDo6GzD-c47bCAFfF496LD7-6/edit?usp=sharing&ouid=113778290627699741743&rtpof=true&sd=true)  
